@@ -22,9 +22,9 @@ import okhttp3.OkHttpClient;
  */
 
 
-public class Api {
+public class VNet {
 
-    private static Api sApi;
+    private static VNet sApi;
     public static final long DEFAULT_TIMEOUT_MILLISECONDS = 15 * 1000;
 
 
@@ -32,7 +32,7 @@ public class Api {
     private OkHttpClient mOkHttpClient;
 
 
-    private Api(OkHttpClient client) {
+    private VNet(OkHttpClient client) {
         if (client == null) {
             initDefaultClient();
         } else {
@@ -61,19 +61,19 @@ public class Api {
 
     public static void initClient(OkHttpClient okHttpClient) {
         if (sApi == null) {
-            synchronized (Api.class) {
+            synchronized (VNet.class) {
                 if (sApi == null) {
-                    sApi = new Api(okHttpClient);
+                    sApi = new VNet(okHttpClient);
                 }
             }
         }
     }
 
-    public static Api getInstance() {
+    public static VNet getInstance() {
         if (sApi == null) {
-            synchronized (Api.class) {
+            synchronized (VNet.class) {
                 if (sApi == null) {
-                    sApi = new Api(null);
+                    sApi = new VNet(null);
                 }
             }
         }

@@ -1,7 +1,7 @@
 package com.mevv.vnet.lib.callback;
 
 
-import com.mevv.vnet.lib.Api;
+import com.mevv.vnet.lib.VNet;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -65,7 +65,7 @@ public abstract class FileCallback extends SimpleCallback<File> {
                 sum += len;
                 fos.write(buf, 0, len);
                 final long finalSum = sum;
-                Api.getInstance().runOnUIThread(new Runnable() {
+                VNet.getInstance().runOnUIThread(new Runnable() {
                     @Override
                     public void run() {
                         inProgress(id, finalSum * 100.0f / total, total);

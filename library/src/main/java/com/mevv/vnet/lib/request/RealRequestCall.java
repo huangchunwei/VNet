@@ -1,7 +1,7 @@
 package com.mevv.vnet.lib.request;
 
 
-import com.mevv.vnet.lib.Api;
+import com.mevv.vnet.lib.VNet;
 import com.mevv.vnet.lib.callback.BitmapCallback;
 import com.mevv.vnet.lib.callback.Callback;
 import com.mevv.vnet.lib.callback.FileCallback;
@@ -111,17 +111,17 @@ public class RealRequestCall {
         mRequest = generateRequest(callback);
         if (mNewClient == null) {//是否设置新的OkHttpClient对象
             if (readTimeOut > 0 || writeTimeOut > 0 || connTimeOut > 0) {//是否设置超时时间
-                readTimeOut = readTimeOut > 0 ? readTimeOut : Api.DEFAULT_TIMEOUT_MILLISECONDS;
-                writeTimeOut = writeTimeOut > 0 ? writeTimeOut : Api.DEFAULT_TIMEOUT_MILLISECONDS;
-                connTimeOut = connTimeOut > 0 ? connTimeOut : Api.DEFAULT_TIMEOUT_MILLISECONDS;
-                mDefaultClient = Api.getInstance().getClient().newBuilder()
+                readTimeOut = readTimeOut > 0 ? readTimeOut : VNet.DEFAULT_TIMEOUT_MILLISECONDS;
+                writeTimeOut = writeTimeOut > 0 ? writeTimeOut : VNet.DEFAULT_TIMEOUT_MILLISECONDS;
+                connTimeOut = connTimeOut > 0 ? connTimeOut : VNet.DEFAULT_TIMEOUT_MILLISECONDS;
+                mDefaultClient = VNet.getInstance().getClient().newBuilder()
                         .readTimeout(readTimeOut, TimeUnit.MILLISECONDS)
                         .writeTimeout(writeTimeOut, TimeUnit.MILLISECONDS)
                         .connectTimeout(connTimeOut, TimeUnit.MILLISECONDS)
                         .build();
                 mCall = mDefaultClient.newCall(mRequest);
             } else {//默认的OkHttpClient
-                mCall = Api.getInstance().getClient().newCall(mRequest);
+                mCall = VNet.getInstance().getClient().newCall(mRequest);
             }
         } else {//新的OkHttpClient
             mCall = mNewClient.newCall(mRequest);

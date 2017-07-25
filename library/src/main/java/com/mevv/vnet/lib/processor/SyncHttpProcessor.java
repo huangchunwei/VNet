@@ -1,7 +1,7 @@
 package com.mevv.vnet.lib.processor;
 
 
-import com.mevv.vnet.lib.Api;
+import com.mevv.vnet.lib.VNet;
 import com.mevv.vnet.lib.callback.Callback;
 import com.mevv.vnet.lib.request.RealRequestCall;
 
@@ -79,7 +79,7 @@ public class SyncHttpProcessor {
 
     private void start() {
         //开始网络请求
-        Api.getInstance().runOnUIThread(new Runnable() {
+        VNet.getInstance().runOnUIThread(new Runnable() {
             @Override
             public void run() {
                 if (mVCallBack != null) {
@@ -96,7 +96,7 @@ public class SyncHttpProcessor {
      * @param o
      */
     private void sendSuccessResult(final int id, final Object o) {
-        Api.getInstance().runOnUIThread(new Runnable() {
+        VNet.getInstance().runOnUIThread(new Runnable() {
             @Override
             public void run() {
                 mVCallBack.onSuccess(id, o);
@@ -114,7 +114,7 @@ public class SyncHttpProcessor {
      */
     private void sendFailedResult(final int id, final Call call, final Exception e) {
         //网络请求失败
-        Api.getInstance().runOnUIThread(new Runnable() {
+        VNet.getInstance().runOnUIThread(new Runnable() {
             @Override
             public void run() {
                 if (mVCallBack != null) {

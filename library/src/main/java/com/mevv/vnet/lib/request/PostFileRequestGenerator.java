@@ -1,7 +1,7 @@
 package com.mevv.vnet.lib.request;
 
 
-import com.mevv.vnet.lib.Api;
+import com.mevv.vnet.lib.VNet;
 import com.mevv.vnet.lib.builder.PostFileBuilder;
 import com.mevv.vnet.lib.callback.Callback;
 
@@ -64,7 +64,7 @@ public class PostFileRequestGenerator extends RequestGenerator {
             @Override
             public void onRequestProgress(final long bytesWritten, final long contentLength) {
 
-                Api.getInstance().runOnUIThread(new Runnable() {
+                VNet.getInstance().runOnUIThread(new Runnable() {
                     @Override
                     public void run() {
                         callback.inProgress(mId, bytesWritten * 1.0f / contentLength, contentLength);
