@@ -12,7 +12,7 @@ import okhttp3.RequestBody;
 import okhttp3.internal.http.HttpMethod;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 15:39.
  * Copyright (c) 2017, Vv All Rights Reserved.

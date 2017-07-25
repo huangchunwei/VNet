@@ -7,7 +7,7 @@ import com.mevv.vnet.lib.request.RequestCall;
 import okhttp3.MediaType;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 14:48.
  * Copyright (c) 2017, Vv All Rights Reserved.

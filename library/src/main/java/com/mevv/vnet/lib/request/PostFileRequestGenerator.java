@@ -19,7 +19,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 15:20.
  * Copyright (c) 2017, Vv All Rights Reserved.

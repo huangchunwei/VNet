@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 10:14.
  * Copyright (c) 2017, Vv All Rights Reserved.

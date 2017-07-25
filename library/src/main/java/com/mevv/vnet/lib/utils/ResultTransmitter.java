@@ -9,7 +9,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * Project name:VCommonSDK
+ * Project name:VNet
  * Author:VV
  * Created on 2017/3/18 22:32.
  * Copyright (c) 2017, vvismile@163.com All Rights Reserved.

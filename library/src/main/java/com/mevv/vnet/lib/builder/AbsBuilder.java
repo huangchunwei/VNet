@@ -7,7 +7,7 @@ import com.mevv.vnet.lib.request.RequestCall;
 import java.util.Map;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 10:29.
  * Copyright (c) 2017, Vv All Rights Reserved.

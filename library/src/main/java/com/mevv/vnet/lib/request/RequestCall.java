@@ -8,7 +8,7 @@ import com.mevv.vnet.lib.callback.StringCallback;
 import okhttp3.OkHttpClient;
 
 /**
- * Project name:WalkingNote
+ * Project name:VNet
  * Author:VV
  * Created on 2017/7/25 10:30.
  * Copyright (c) 2017, Vv All Rights Reserved.
